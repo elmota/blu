@@ -1,0 +1,120 @@
+<div class="container main">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="title">
+          Sucursales
+        </h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem tempora quas explicabo repellendus, magnam
+          eligendi omnis aliquam cum asperiores cumque.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+          <div class="form-group">
+            <p-autoComplete [(ngModel)]="brand" [suggestions]="filteredCountries" (completeMethod)="filterBrands($event)"
+            [minLength]="1" placeholder="Ciudad" [dropdown]="true">
+            <ng-template let-brand pTemplate="item">
+                <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+                    <div style="font-size:18px;float:right;margin:10px 10px 0 0">{{brand}}</div>
+                </div>
+            </ng-template>
+        </p-autoComplete>
+            <!-- <select id="my-select" class="form-control" name="">
+
+              <option *ngFor="let region of regiones">{{region?.nombre}}</option>
+
+            </select> -->
+          </div>
+          <div class="form-group">
+            <label for="my-select">Comuna</label>
+            <select id="my-select" class="form-control" name="" (change)="loadSucursales()">
+
+              <option *ngFor="let comuna of comunas">{{comuna?.nombre}}</option>
+
+            </select>
+          </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col">
+            <h1 class="placeholder" *ngIf="placeholder">
+              <em>
+                Seleccione una susucral...
+              </em>
+            </h1>
+
+            <div class="results" *ngIf="!placeholder">
+
+              <p-table [value]="sucursales" sortField="brand" sortMode="single">
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th>Ciudad</th>
+                    <th>Sucursal</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th></th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-sucursal let-rowIndex="rowIndex">
+                  <tr>
+                    <td *ngIf="0 == rowIndex" [attr.rowspan]="3">
+                      {{sucursal?.location.state_name}}</td>
+                    <td>{{sucursal?.agency_name}}</td>
+                    <td>{{sucursal?.location.street_name}} {{sucursal?.location.street_number}}</td>
+                    <td>+56 9832 2343</td>
+                    <td class="text-center"><i (click)="loadMap(rowIndex)" class="pi pi-map-marker button"></i></td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-dialog header="{{sucursal?.agency_name}}" [(visible)]="display" [modal]="true" [responsive]="true"
+  [style]="{width: '800px', height: '500px'}">
+  <div class="maps">
+    <app-maps></app-maps>
+  </div>
+
+  <div class="datos">
+    <p>
+      <strong>Direccion:</strong> {{sucursal?.street_name}} {{sucursal?.street_number}}
+    </p>
+    <p>
+      <strong>Telefonos:</strong> <a href="">+56 7346 3736</a>, <a href="">+56 7346 3736</a>
+    </p>
+    <p>
+      <strong>Horarios de atencion:</strong>
+    </p>
+    <ul class="sucursales">
+      <li>
+        Lunes
+        <span>De {{sucursal?.open_hours.monday[0].from}} a {{sucursal?.open_hours.monday[0].to}}</span>,
+      </li>
+      <li>
+        Martes
+        <span>De {{sucursal?.open_hours.monday[0].from}} a {{sucursal?.open_hours.monday[0].to}}</span>,
+      </li>
+      <li>
+        Miercoles
+        <span>De {{sucursal?.open_hours.monday[0].from}} a {{sucursal?.open_hours.monday[0].to}}</span>,
+      </li>
+      <li>
+        Jueves
+        <span>De {{sucursal?.open_hours.monday[0].from}} a {{sucursal?.open_hours.monday[0].to}}</span>,
+      </li>
+      <li>
+        Viernes
+        <span>De {{sucursal?.open_hours.monday[0].from}} a {{sucursal?.open_hours.monday[0].to}}</span>,
+      </li>
+    </ul>
+  </div>
+
+</p-dialog>

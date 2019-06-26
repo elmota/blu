@@ -1,0 +1,493 @@
+{
+  "ciudades": [
+    {
+      "id": 1,
+      "pais": "CL",
+      "comuna": "Antofagasta"
+    },
+    {
+      "pais": "Customer004",
+      "cimuna": "customer004@email.com",
+      "id": 2
+    },
+    {
+      "pais": "CL",
+      "comuna": "Antofagasta",
+      "id": 3
+    },
+    {
+      "pais": "CL",
+      "comuna": "Antofagasta",
+      "id": 4
+    },
+    {
+      "pais": "CL",
+      "comuna": "Antofagasta",
+      "id": 5
+    },
+    {
+      "pais": "CL",
+      "comuna": "Antofagasta",
+      "id": 6
+    },
+    {
+      "id": 7
+    }
+  ],
+  "agencies": [
+    {
+      "agency_id": "5",
+      "agency_name": "Blue Express Calama",
+      "location": {
+        "country_name": "CHILE",
+        "state_name": "Antofagasta",
+        "city_name": "CALAMA",
+        "city_id": null,
+        "neighborhood_name": null,
+        "street_name": "Tarapaca",
+        "street_number": "2120",
+        "other_info": null,
+        "zip_code": "1390000",
+        "geolocation": {
+          "latitude": -22.4571732,
+          "longitude": -68.9278638
+        }
+      },
+      "package_reception": false,
+      "pickup_availabilty": false,
+      "open_hours": {
+        "monday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "tuesday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "wednesday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "thursday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "friday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "saturday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          }
+        ],
+        "sunday": null,
+        "holidays": null
+      },
+      "status": "active",
+      "last_updated": null,
+      "volumetric_capacity": null,
+      "maximum_package_dimensions": {
+        "length": 101,
+        "height": 101,
+        "width": 101,
+        "weight": 25000
+      }
+    },
+    {
+      "agency_id": "6",
+      "agency_name": "Blue Express Antofagasta",
+      "location": {
+        "country_name": "CHILE",
+        "state_name": "Antofagasta",
+        "city_name": "ANTOFAGASTA",
+        "city_id": null,
+        "neighborhood_name": null,
+        "street_name": "Av Pedro Aguirre",
+        "street_number": "7420",
+        "other_info": null,
+        "zip_code": "1240000 ",
+        "geolocation": {
+          "latitude": -23.6008919,
+          "longitude": -70.3889854
+        }
+      },
+      "package_reception": false,
+      "pickup_availabilty": false,
+      "open_hours": {
+        "monday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "tuesday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "wednesday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "thursday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "friday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "saturday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          }
+        ],
+        "sunday": null,
+        "holidays": null
+      },
+      "status": "active",
+      "last_updated": null,
+      "volumetric_capacity": null,
+      "maximum_package_dimensions": {
+        "length": 101,
+        "height": 101,
+        "width": 101,
+        "weight": 25000
+      }
+    },
+    {
+      "agency_id": "7",
+      "agency_name": "DROP OFF",
+      "location": {
+        "country_name": "CHILE",
+        "state_name": "Antofagasta",
+        "city_name": "SAN PEDRO DE ATACAMA",
+        "city_id": null,
+        "neighborhood_name": null,
+        "street_name": "Longitudinal Norte",
+        "street_number": "3604",
+        "other_info": null,
+        "zip_code": "1410000",
+        "geolocation": {
+          "latitude": -22.908707,
+          "longitude": -68.199715
+        }
+      },
+      "package_reception": false,
+      "pickup_availabilty": false,
+      "open_hours": {
+        "monday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "tuesday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "wednesday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "thursday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "friday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          },
+          {
+            "from": "16:00",
+            "to": "18:00"
+          }
+        ],
+        "saturday": [
+          {
+            "from": "09:00",
+            "to": "13:00"
+          }
+        ],
+        "sunday": null,
+        "holidays": null
+      },
+      "status": "inactive",
+      "last_updated": null,
+      "volumetric_capacity": null,
+      "maximum_package_dimensions": {
+        "length": 101,
+        "height": 101,
+        "width": 101,
+        "weight": 25000
+      }
+    }
+  ],
+  "regiones": [
+    {
+      "codigo": "15",
+      "tipo": "region",
+      "nombre": "Arica y Parinacota",
+      "lat": -18.5075,
+      "lng": -69.6451,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "01",
+      "tipo": "region",
+      "nombre": "Tarapacá",
+      "lat": -20.164,
+      "lng": -69.5541,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "02",
+      "tipo": "region",
+      "nombre": "Antofagasta",
+      "lat": -23.7503,
+      "lng": -69.6,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "03",
+      "tipo": "region",
+      "nombre": "Atacama",
+      "lat": -27.5276,
+      "lng": -70.2494,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "04",
+      "tipo": "region",
+      "nombre": "Coquimbo",
+      "lat": -30.8301,
+      "lng": -70.9816,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "05",
+      "tipo": "region",
+      "nombre": "Valparaíso",
+      "lat": -32.9039,
+      "lng": -71.0262,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "13",
+      "tipo": "region",
+      "nombre": "Metropolitana de Santiago",
+      "lat": -33.4417,
+      "lng": -70.6541,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "06",
+      "tipo": "region",
+      "nombre": "Del Libertador Gral. Bernardo O’Higgins",
+      "lat": -34.4294,
+      "lng": -71.0393,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "07",
+      "tipo": "region",
+      "nombre": "Del Maule",
+      "lat": -35.5892,
+      "lng": -71.5007,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "08",
+      "tipo": "region",
+      "nombre": "Del Biobío",
+      "lat": -37.2442,
+      "lng": -72.4661,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "09",
+      "tipo": "region",
+      "nombre": "De la Araucanía",
+      "lat": -38.5505,
+      "lng": -72.4382,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "14",
+      "tipo": "region",
+      "nombre": "De los Ríos",
+      "lat": -39.9086,
+      "lng": -72.7034,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "10",
+      "tipo": "region",
+      "nombre": "De los Lagos",
+      "lat": -42.1071,
+      "lng": -72.6425,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "11",
+      "tipo": "region",
+      "nombre": "Aysén del Gral. Carlos Ibáñez del Campo",
+      "lat": -46.2772,
+      "lng": -73.6628,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "12",
+      "tipo": "region",
+      "nombre": "Magallanes y de la Antártica Chilena",
+      "lat": -54.3551,
+      "lng": -70.5284,
+      "url": "",
+      "codigo_padre": "00"
+    },
+    {
+      "codigo": "16",
+      "tipo": "region",
+      "nombre": "Ñuble",
+      "lat": -366.191,
+      "lng": -720.182,
+      "url": "",
+      "codigo_padre": "00"
+    }
+  ],
+  "comunas": [
+    {
+      "codigo": "15101",
+      "tipo": "comuna",
+      "nombre": "Arica",
+      "lat": -18.477,
+      "lng": -70.3221,
+      "url": "",
+      "codigo_padre": "151"
+    },
+    {
+      "codigo": "15102",
+      "tipo": "comuna",
+      "nombre": "Camarones",
+      "lat": -19.0089,
+      "lng": -69.9074,
+      "url": "",
+      "codigo_padre": "151"
+    },
+    {
+      "codigo": "15202",
+      "tipo": "comuna",
+      "nombre": "General Lagos",
+      "lat": -17.8324,
+      "lng": -69.6094,
+      "url": "",
+      "codigo_padre": "152"
+    },
+    {
+      "codigo": "15201",
+      "tipo": "comuna",
+      "nombre": "Putre",
+      "lat": -18.1798,
+      "lng": -69.5544,
+      "url": "",
+      "codigo_padre": "152"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+.custom-nav {
+  background-color: black;
+}
+.main {
+  padding-top: 100px;
+}
+.placeholder {
+  color: #ccc;
+  font-weight: 300;
+}
+
+.maps {
+
+}
+.navbar {
+  background: #1F1F1F!important;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white!important;
+}
+.navbar-dark .navbar-nav .active>.nav-link {
+  border-bottom: 2px solid white;
+}
+.logo {
+  width: 80px;
+}
+.sucursales {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline;
+  }
+}
+body .ui-dialog .ui-dialog-titlebar {
+  background: #1f1f1f;
+  color: white;
+}
+.ui-dialog-content {
+  p {
+    padding-bottom: 8px;
+  }
+}
+.button {
+  font-size: 30px!important;
+  cursor: pointer;
+}
+body .ui-table .ui-table-tbody > tr:nth-child(even),
+body .ui-table .ui-table-thead > tr > th {
+  background-color: #F2F6FF;
+}
+.datos {
+  margin-top: 14px;
+}
