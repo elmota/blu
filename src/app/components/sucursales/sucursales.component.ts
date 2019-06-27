@@ -12,13 +12,14 @@ export class SucursalesComponent implements OnInit {
   brand: string;
 
   countries: any;
+  comunas: any;
   filteredCountriesSingle: any[];
 
   filteredCountriesMultiple: any[];
 
   filteredCountries = [];
+  filteredComunas = [];
 
-  comunas: any;
   ciudades: any;
   regiones: any;
   sucursales: any;
@@ -57,7 +58,7 @@ export class SucursalesComponent implements OnInit {
 
   ngOnInit() {
     this.loadCiudades();
-    // this.loadComunas();
+    this.loadComunas();
   }
   loadCiudad() {
     this.suc.getCiudades().subscribe((data: {}) => {
@@ -112,18 +113,35 @@ export class SucursalesComponent implements OnInit {
   //     console.log('error', error);
   //   }))
   // }
-  
+
   filterBrands(event) {
     this.filteredCountries = [];
-    // console.log('countries','query', event.query);
-    for(let i = 0; i < this.countries.length; i++) {
-        let brand = this.countries[i];
-        // console.log('brand', this.countries[i]);
-        if(brand.nombre.toLowerCase().indexOf(event.query.toLowerCase()) == 0) {
-          console.log('BRAND', brand);
-          // this.brand = brand.nombre;
-            this.filteredCountries.push(brand.nombre);
-        }
+    for (let i = 0; i < this.countries.length; i++) {
+      let brand = this.countries[i];
+      if (brand.nombre.toLowerCase().indexOf(event.query.toLowerCase()) == 0) {
+        // console.log('REFRESH COMUNAS', brand);
+        this.filteredCountries.push(brand.nombre);
+      }
     }
-}
+  }
+
+  filterComunas(event) {
+    this.filteredComunas = [];
+    for (let i = 0; i < this.comunas.length; i++) {
+      let comuna = this.comunas[i];
+      if (comuna.nombre.toLowerCase().indexOf(event.query.toLowerCase()) == 0) {
+        this.filteredComunas.push(comuna.nombre);
+      }
+    }
+  }
+  refreshComunas(event) {
+    this.filteredCountries = [];
+    for (let i = 0; i < this.countries.length; i++) {
+      console.log('REFRESH COMUNAS', event);
+      let brand = event;
+      if (brand.toLowerCase().indexOf(event.toLowerCase()) == 0) {
+        console.log('REFRESH COMUNAS', brand);
+      }
+    }
+  }
 }

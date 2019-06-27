@@ -15,10 +15,10 @@
       <div class="col-md-3">
           <div class="form-group">
             <p-autoComplete [(ngModel)]="brand" [suggestions]="filteredCountries" (completeMethod)="filterBrands($event)"
-            [minLength]="1" placeholder="Ciudad" [dropdown]="true">
+            [minLength]="1" placeholder="Ciudad" [dropdown]="true" (onSelect)="refreshComunas($event)">
             <ng-template let-brand pTemplate="item">
                 <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
-                    <div style="font-size:18px;float:right;margin:10px 10px 0 0">{{brand}}</div>
+                    <div style="font-size:14px;margin:10px 10px 0 0">{{brand}}</div>
                 </div>
             </ng-template>
         </p-autoComplete>
@@ -29,12 +29,20 @@
             </select> -->
           </div>
           <div class="form-group">
-            <label for="my-select">Comuna</label>
-            <select id="my-select" class="form-control" name="" (change)="loadSucursales()">
+            <p-autoComplete [(ngModel)]="comuna" [suggestions]="filteredComunas" (completeMethod)="filterComunas($event)"
+            [minLength]="1" placeholder="Comuna" [dropdown]="true">
+            <ng-template let-comuna pTemplate="item">
+                <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+                    <div style="font-size:14px;margin:10px 10px 0 0">{{comuna}}</div>
+                </div>
+            </ng-template>
+        </p-autoComplete>
+        <!-- <label for="my-select">Comuna</label> -->
+            <!-- <select id="my-select" class="form-control" name="" (change)="loadSucursales()">
 
               <option *ngFor="let comuna of comunas">{{comuna?.nombre}}</option>
 
-            </select>
+            </select> -->
           </div>
       </div>
       <div class="col-md-9">
