@@ -7,45 +7,76 @@ import { retry, catchError } from 'rxjs/operators';
 @Injectable()
 export class SucursalesService {
 
-    apiURL = 'http://localhost:3000';
-    body = '';
+    apiURL = 'http://localhost:8080/sucursalBL';
+    country = {
+  "pais":"CL"
+}
+
+
     constructor(private http: HttpClient) { }
 
-    httpOptions = {
-        headers: new HttpHeaders({
-            'Content-Type': 'application/json'
-        })
-    }
-
-    // HttpClient API get() method => Fetch employees list
-    getCiudades(): Observable<Ciudades> {
-        return this.http.get<Ciudades>(this.apiURL + '/ciudades')
-    }
-    // HttpClient API get() method => Fetch employees list
-    getSucursales(): Observable<Sucursales> {
-        return this.http.get<Sucursales>(this.apiURL + '/agencies')
-    }
-    getRegiones_() {
-        return this.http.get<Ciudades>(this.apiURL + '/regiones')
-    }
-    getRegiones() {
-        return this.http.post(this.apiURL + '/ciudades', '')
-            .subscribe(
-                data => {
-                    console.log("POST Request is successful ", data);
-                },
-                error => {
-
-                    console.log("Error", error);
-
-                }
-
-            );
-    }
+// httpOptions = {
+//             headers: new HttpHeaders({
+//                 'Content-Type': 'application/json',
+//             })
+//         };
 
 
-    getComunas(): Observable<Ciudades> {
-        return this.http.get<Ciudades>(this.apiURL + '/comunas');
-    }
+
+
+  getRegiones(data): Observable<string> {
+    return new Observable<string>(
+      observer => {
+        this.http.post(this.apiURL + '/regiones', this.country).subscribe(
+          (response) => {
+            observer.next(response);
+          },
+          (error: any) => {
+            console.log("eerro")
+          }
+        );
+      }
+    );
+  }
+
+    getComunas(data): Observable<string> {
+    return new Observable<string>(
+      observer => {
+        this.http.post(this.apiURL + '/comunas', data).subscribe(
+          (response) => {
+            observer.next(response);
+          },
+          (error: any) => {
+            console.log("eerro")
+          }
+        );
+      }
+    );
+  }
+
+      getSucursales(data): Observable<string> {
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'my-auth-token'
+  })
+};
+
+        
+    return new Observable<string>(
+      observer => {
+        this.http.post(this.apiURL + '/sucursal', data, httpOptions).subscribe(
+          (response) => {
+            observer.next(response);
+          },
+          (error: any) => {
+            console.log("eerro")
+          }
+        );
+      }
+    );
+  }
+
 
 }

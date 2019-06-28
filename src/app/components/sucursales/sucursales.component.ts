@@ -26,78 +26,51 @@ export class SucursalesComponent implements OnInit {
   sucursal: any;
   placeholder = true;
   display = false;
-  cars = [
-    {
-      "ciudad": "stgo",
-      "direccion": "aca",
-      "telefono": "8276226"
-    },
-    {
-      "ciudad": "stgo",
-      "direccion": "aca",
-      "telefono": "8276226"
-    },
-    {
-      "ciudad": "stgo",
-      "direccion": "aca",
-      "telefono": "8276226"
-    },
-    {
-      "ciudad": "stgo",
-      "direccion": "aca",
-      "telefono": "8276226"
-    },
-    {
-      "ciudad": "stgo",
-      "direccion": "aca",
-      "telefono": "8276226"
-    }
-  ];
+  scuursalesSize = 0;
 
   constructor(private suc: SucursalesService) { }
 
   ngOnInit() {
-    this.loadCiudades();
-    this.loadComunas();
-  }
-  loadCiudad() {
-    this.suc.getCiudades().subscribe((data: {}) => {
-      console.log('Data', data);
-    }
-    )
+    this.loadRegiones();
   }
 
-  loadCiudades() {
-    this.suc.getRegiones_().subscribe((data: {}) => {
-      console.log('Datax', data);
-      this.countries = data;
-    }
-    )
+  loadRegiones() {
+            this.suc.getRegiones("").subscribe(
+      (response: any) => {
+        this.regiones = response;
+        },
+              (error: any) => {
+        })
+  }
+    loadComunas(data) {
+            this.suc.getComunas(data).subscribe(
+      (response: any) => {
+        this.comunas = response;
+        },
+              (error: any) => {
+        })
   }
 
-  loadSucursales() {
-    this.suc.getSucursales().subscribe((data: {}) => {
-      console.log('Data', data);
-      this.sucursales = data;
-      this.placeholder = false;
-      // this.display = true;
-    }
-    )
-  }
-
-  loadComunas() {
-    this.suc.getComunas().subscribe((data: {}) => {
-      console.log('Data', data);
-      this.comunas = data;
-      // this.display = true;
-    }
-    )
+  loadSucursales(event) {
+            let data = {
+              "pais": "CL",
+          "comuna": "Antofagasta"
+        }
+            this.suc.getSucursales(data).subscribe(
+      (response: any) => {
+        this.placeholder = false;
+        this.sucursales = response.agencies;
+        this.scuursalesSize = this.sucursales.length;
+        },
+              (error: any) => {
+        })
   }
 
   loadMap(i) {
+    console.log(i, this.sucursales[i]);
     this.display = true;
-    console.log(i);
-    this.sucursal = this.sucursales[0];
+    this.sucursal = null;
+    this.sucursal = this.sucursales[i];
   }
   loadResults() {
     this.placeholder = false;
@@ -105,22 +78,14 @@ export class SucursalesComponent implements OnInit {
   click() {
     this.display = true;
   }
-  // filterCountrySingle(event) {
-  //   let query = event.query;
-  //   this.suc.getRegiones_().subscribe(countries => {
-  //     this.filteredCountriesSingle = this.filterCountry(query, countries);
-  //   }, (error => {
-  //     console.log('error', error);
-  //   }))
-  // }
 
   filterBrands(event) {
     this.filteredCountries = [];
-    for (let i = 0; i < this.countries.length; i++) {
-      let brand = this.countries[i];
-      if (brand.nombre.toLowerCase().indexOf(event.query.toLowerCase()) == 0) {
-        // console.log('REFRESH COMUNAS', brand);
-        this.filteredCountries.push(brand.nombre);
+    for (let i = 0; i < this.regiones.length; i++) {
+      let brand = this.regiones[i];
+      if (brand.nombreRegion.toLowerCase().indexOf(event.query.toLowerCase()) == 0) {
+        
+        this.filteredCountries.push(brand.nombreRegion);
       }
     }
   }
@@ -129,18 +94,22 @@ export class SucursalesComponent implements OnInit {
     this.filteredComunas = [];
     for (let i = 0; i < this.comunas.length; i++) {
       let comuna = this.comunas[i];
-      if (comuna.nombre.toLowerCase().indexOf(event.query.toLowerCase()) == 0) {
-        this.filteredComunas.push(comuna.nombre);
+      if (comuna.nombreComuna.toLowerCase().indexOf(event.query.toLowerCase()) == 0) {
+        this.filteredComunas.push(comuna.nombreComuna);
       }
     }
   }
+
   refreshComunas(event) {
-    this.filteredCountries = [];
-    for (let i = 0; i < this.countries.length; i++) {
-      console.log('REFRESH COMUNAS', event);
-      let brand = event;
-      if (brand.toLowerCase().indexOf(event.toLowerCase()) == 0) {
-        console.log('REFRESH COMUNAS', brand);
+    this.filteredComunas = [];
+    for (let i = 0; i < this.regiones.length; i++) {
+      let comuna = event;
+      if (comuna.toLowerCase().indexOf(event.toLowerCase()) == 0) {
+        // console.log('REFRESH COMUNAS', comuna);
+        let data = {
+          "comuna": comuna
+        }
+        this.loadComunas(data);
       }
     }
   }
