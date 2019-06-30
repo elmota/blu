@@ -28,7 +28,7 @@ export class SucursalesService {
     return new Observable<string>(
       observer => {
         this.http.post(this.apiURL + '/regiones', this.country).subscribe(
-          (response) => {
+          (response: any) => {
             observer.next(response);
           },
           (error: any) => {
@@ -43,7 +43,7 @@ export class SucursalesService {
     return new Observable<string>(
       observer => {
         this.http.post(this.apiURL + '/comunas', data).subscribe(
-          (response) => {
+          (response: any) => {
             observer.next(response);
           },
           (error: any) => {
@@ -67,7 +67,7 @@ const httpOptions = {
     return new Observable<string>(
       observer => {
         this.http.post(this.apiURL + '/sucursal', data, httpOptions).subscribe(
-          (response) => {
+          (response: any) => {
             observer.next(response);
           },
           (error: any) => {
