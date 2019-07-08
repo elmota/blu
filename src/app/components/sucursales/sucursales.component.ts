@@ -35,35 +35,35 @@ export class SucursalesComponent implements OnInit {
   }
 
   loadRegiones() {
-            this.suc.getRegiones("").subscribe(
+    this.suc.getRegiones("").subscribe(
       (response: any) => {
         this.regiones = response;
-        },
-              (error: any) => {
-        })
+      },
+      (error: any) => {
+      })
   }
-    loadComunas(data) {
-            this.suc.getComunas(data).subscribe(
+  loadComunas(data) {
+    this.suc.getComunas(data).subscribe(
       (response: any) => {
         this.comunas = response;
-        },
-              (error: any) => {
-        })
+      },
+      (error: any) => {
+      })
   }
 
   loadSucursales(event) {
-            let data = {
-              "pais": "CL",
-          "comuna": "Antofagasta"
-        }
-            this.suc.getSucursales(data).subscribe(
+    let data = {
+      "pais": "CL",
+      "comuna": "Antofagasta"
+    }
+    this.suc.getSucursales(data).subscribe(
       (response: any) => {
         this.placeholder = false;
         this.sucursales = response.agencies;
         this.scuursalesSize = this.sucursales.length;
-        },
-              (error: any) => {
-        })
+      },
+      (error: any) => {
+      })
   }
 
   loadMap(i) {
@@ -84,7 +84,7 @@ export class SucursalesComponent implements OnInit {
     for (let i = 0; i < this.regiones.length; i++) {
       let brand = this.regiones[i];
       if (brand.nombreRegion.toLowerCase().indexOf(event.query.toLowerCase()) == 0) {
-        
+
         this.filteredCountries.push(brand.nombreRegion);
       }
     }

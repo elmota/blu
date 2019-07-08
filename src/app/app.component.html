@@ -13,25 +13,29 @@
       </ul>
     <ul class="navbar-nav justify-content-end nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Seguimiento</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="sucursales">Sucursales <span class="sr-only">(current)</span></a>
+        <a class="nav-link" (click)="scrollToTop('#seguimiento')">Seguimiento</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Servicios</a>
+        <a class="nav-link" (click)="scrollToTop('#sucursales')">Sucursales <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Informacion Cliente</a>
+        <a class="nav-link" (click)="scrollToTop('#servicios')">Servicios</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Nosotros</a>
+        <a class="nav-link" (click)="scrollToTop('#informacion')">Informacion Cliente</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contactenos</a>
+        <a class="nav-link" (click)="scrollToTop('#nosotros')">Nosotros</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="scrollToTop('#contactenos')">Contactenos</a>
       </li>
     </ul>
   </div>
 </nav>
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+
+
+<app-sucursales></app-sucursales>
+<app-servicios></app-servicios>
