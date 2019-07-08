@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SucursalesComponent } from './components/sucursales/sucursales.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
+import { InfoComponent } from './components/info/info.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapsComponent } from './components/maps/maps.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +23,10 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
   declarations: [
     AppComponent,
     SucursalesComponent,
-    ServiciosComponent,
+    ServiciosComponent,    
+    InfoComponent,
+    NosotrosComponent,
+    ContactoComponent,
     MapsComponent
   ],
   imports: [
