@@ -1,3 +1,50 @@
-<div class="container-fluid main" id="info">
-  <h1>Informacion</h1>
-</div>
+<div class="container main" id="info">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="center gap fade-down section-heading no-display animated fadeInDown appear">
+        <h2 class="main-title">Información Cliente</h2>
+      </div>
+    </div>
+  </div>
+  <div class="opciones row">
+    <div class="col-md text-center"><a (click)="changeTab(1)" [ngClass]="{'active': section == 1}">Cobertura de Riesgos</a></div>
+    <div class="col-md text-center"><a (click)="changeTab(2)" [ngClass]="{'active': section == 2}">Preguntas Frecuentes</a></div>
+    <div class="col-md text-center"><a (click)="changeTab(3)" [ngClass]="{'active': section == 3}">Glosario de Términos</a></div>
+    <div class="col-md text-center"><a (click)="changeTab(4)" [ngClass]="{'active': section == 4}">Mercancías Peligrosas</a></div>
+    <div class="col-md text-center"><a (click)="changeTab(5)" [ngClass]="{'active': section == 5}">Consulte su Boleta</a></div>
+  </div>
+
+
+  <div class="tabContent" id="section1" *ngIf="section == 1">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, labore?
+    </p>
+
+  </div>
+  <div class="tabContent" id="section2" *ngIf="section == 2">
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, minima!
+    </p>
+
+  </div>
+  <div class="tabContent" id="section3" *ngIf="section == 3">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, a?
+    </p>
+
+  </div>
+  <div class="tabContent" id="section4" *ngIf="section == 4">
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, sed?
+    </p>
+
+  </div>
+  <div class="tabContent" id="section5" *ngIf="section == 5">
+    <p>
+      lorem10
+    </p>
+
+  </div>
+
+  <div class="row"></div>

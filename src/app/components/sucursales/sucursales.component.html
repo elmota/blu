@@ -1,94 +1,91 @@
-<div class="container-fluid main" id="sucursales">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <h1 class="title">
-          Sucursales
-        </h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem tempora quas explicabo repellendus, magnam
-          eligendi omnis aliquam cum asperiores cumque.
-        </p>
+<div class="container main" id="sucursales">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="center gap fade-down section-heading no-display animated fadeInDown appear">
+        <h2 class="main-title">Sucursales</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-3">
-          <div class="form-group">
-            <p-autoComplete [(ngModel)]="brand" [suggestions]="filteredCountries" (completeMethod)="filterBrands($event)"
-            [minLength]="1" placeholder="Ciudad" [dropdown]="true" (onSelect)="refreshComunas($event)">
-            <ng-template let-brand pTemplate="item">
-                <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
-                    <div style="font-size:14px;margin:10px 10px 0 0">{{brand}}</div>
-                </div>
-            </ng-template>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <p-autoComplete [(ngModel)]="brand" [suggestions]="filteredCountries" (completeMethod)="filterBrands($event)"
+          [minLength]="1" placeholder="Ciudad" [dropdown]="true" (onSelect)="refreshComunas($event)">
+          <ng-template let-brand pTemplate="item">
+            <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+              <div style="font-size:14px;margin:10px 10px 0 0">{{brand}}</div>
+            </div>
+          </ng-template>
         </p-autoComplete>
-            <!-- <select id="my-select" class="form-control" name="">
+        <!-- <select id="my-select" class="form-control" name="">
 
               <option *ngFor="let region of regiones">{{region?.nombre}}</option>
 
             </select> -->
-          </div>
-          <div class="form-group">
-            <p-autoComplete [(ngModel)]="comuna" [suggestions]="filteredComunas" (completeMethod)="filterComunas($event)"
-            [minLength]="1" placeholder="Comuna" [dropdown]="true" (onSelect)="loadSucursales($event)">
-            <ng-template let-comuna pTemplate="item">
-                <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
-                    <div style="font-size:14px;margin:10px 10px 0 0">{{comuna}}</div>
-                </div>
-            </ng-template>
+      </div>
+      <div class="form-group">
+        <p-autoComplete [(ngModel)]="comuna" [suggestions]="filteredComunas" (completeMethod)="filterComunas($event)"
+          [minLength]="1" placeholder="Comuna" [dropdown]="true" (onSelect)="loadSucursales($event)">
+          <ng-template let-comuna pTemplate="item">
+            <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+              <div style="font-size:14px;margin:10px 10px 0 0">{{comuna}}</div>
+            </div>
+          </ng-template>
         </p-autoComplete>
         <!-- <label for="my-select">Comuna</label> -->
-            <!-- <select id="my-select" class="form-control" name="" (change)="loadSucursales()">
+        <!-- <select id="my-select" class="form-control" name="" (change)="loadSucursales()">
 
               <option *ngFor="let comuna of comunas">{{comuna?.nombre}}</option>
 
             </select> -->
-          </div>
       </div>
-      <div class="col-md-9">
-        <div class="row">
-          <div class="col">
-            <h1 class="placeholder" *ngIf="placeholder">
-              <em>
-                Seleccione una susucral...
-              </em>
-            </h1>
+    </div>
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col">
+          <h1 class="placeholder" *ngIf="placeholder">
+            <em>
+              Seleccione una susucral...
+            </em>
+          </h1>
 
-            <div class="results" *ngIf="!placeholder">
+          <div class="results" *ngIf="!placeholder">
 
-              <p-table [value]="sucursales" sortField="brand" sortMode="single">
-                <ng-template pTemplate="header">
-                  <tr>
-                    <th>Ciudad</th>
-                    <th>Sucursal</th>
-                    <th>Direccion</th>
-                    <th>Telefono</th>
-                    <th></th>
-                  </tr>
-                </ng-template>
-                <ng-template pTemplate="body" let-sucursal let-rowIndex="rowIndex">
-                  <tr>
-                    <td *ngIf="0 == rowIndex" [attr.rowspan]="scuursalesSize">
-                      {{sucursal?.location.state_name}}</td>
-                    <td>{{sucursal?.agency_name}}</td>
-                    <td>{{sucursal?.location.street_name}} {{sucursal?.location.street_number}}</td>
-                    <td>+56 9832 2343</td>
-                    <td class="text-center"><i (click)="loadMap(rowIndex)" class="pi pi-map-marker button"></i></td>
-                  </tr>
-                </ng-template>
-              </p-table>
-            </div>
+            <p-table [value]="sucursales" sortField="brand" sortMode="single">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Ciudad</th>
+                  <th>Sucursal</th>
+                  <th>Direccion</th>
+                  <th>Telefono</th>
+                  <th></th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-sucursal let-rowIndex="rowIndex">
+                <tr>
+                  <td *ngIf="0 == rowIndex" [attr.rowspan]="scuursalesSize">
+                    {{sucursal?.location.state_name}}</td>
+                  <td>{{sucursal?.agency_name}}</td>
+                  <td>{{sucursal?.location.street_name}} {{sucursal?.location.street_number}}</td>
+                  <td>+56 9832 2343</td>
+                  <td class="text-center"><i (click)="loadMap(rowIndex)" class="pi pi-map-marker button"></i></td>
+                </tr>
+              </ng-template>
+            </p-table>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </div>
 
 <p-dialog header="{{sucursal?.agency_name}}" [(visible)]="display" [modal]="true" [responsive]="true"
   [style]="{width: '800px', height: '500px'}">
   <div class="maps">
-    <app-maps [latitude]="sucursal?.location.geolocation.latitude" [longitude]="sucursal?.location.geolocation.longitude"></app-maps>
+    <app-maps [latitude]="sucursal?.location.geolocation.latitude"
+      [longitude]="sucursal?.location.geolocation.longitude"></app-maps>
   </div>
 
   <div class="datos">

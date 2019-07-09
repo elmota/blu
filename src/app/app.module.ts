@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SucursalesComponent } from './components/sucursales/sucursales.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
+import { SeguimientoComponent } from './components/seguimiento/seguimiento.component';
 import { InfoComponent } from './components/info/info.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
@@ -27,7 +28,8 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
     InfoComponent,
     NosotrosComponent,
     ContactoComponent,
-    MapsComponent
+    MapsComponent,
+    SeguimientoComponent
   ],
   imports: [
     ScrollToModule.forRoot(),

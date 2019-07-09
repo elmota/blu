@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
+  section = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.changeTab(1);
+  }
+
+  changeTab(tab) {
+    this.section = tab;
   }
 }
