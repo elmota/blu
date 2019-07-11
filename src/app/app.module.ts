@@ -19,6 +19,17 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { FormsModule }   from '@angular/forms';
 import {DropdownModule} from 'primeng/dropdown';
 import { ScrollToModule } from 'ng2-scroll-to-el';
+import { EnviosComponent } from './components/_servicios/envios/envios.component';
+import { OficinasComponent } from './components/_servicios/oficinas/oficinas.component';
+import { CourierComponent } from './components/_servicios/courier/courier.component';
+import { AlmacenajeComponent } from './components/_servicios/almacenaje/almacenaje.component';
+import { HomeComponent } from './components/home/home.component';
+import { HistoriaComponent } from './components/_nosotros/historia/historia.component';
+import { MisionComponent } from './components/_nosotros/mision/mision.component';
+import { ValoresComponent } from './components/_nosotros/valores/valores.component';
+import { TecnologiaComponent } from './components/_nosotros/tecnologia/tecnologia.component';
+import { IntegracionComponent } from './components/_nosotros/integracion/integracion.component';
+import { PoliticaComponent } from './components/_nosotros/politica/politica.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +40,18 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
     NosotrosComponent,
     ContactoComponent,
     MapsComponent,
-    SeguimientoComponent
+    SeguimientoComponent,
+    EnviosComponent,
+    OficinasComponent,
+    CourierComponent,
+    AlmacenajeComponent,
+    HomeComponent,
+    HistoriaComponent,
+    MisionComponent,
+    ValoresComponent,
+    TecnologiaComponent,
+    IntegracionComponent,
+    PoliticaComponent
   ],
   imports: [
     ScrollToModule.forRoot(),
