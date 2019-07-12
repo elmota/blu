@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from './../../app.component';
 
 @Component({
   selector: 'app-servicios',
@@ -8,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class ServiciosComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(
+    private app: AppComponent
+  ) { }
 
   ngOnInit(): void {
+  }
+  navigateTo(path) {
+    this.app.navigateTo(path);
   }
 }

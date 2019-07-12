@@ -1,0 +1,330 @@
+<div class="wrapper">
+    <div class="container" id="info">
+
+        <div class="well conta clearfix">
+            <h3>Solicitud de Materiales</h3>
+            <span class="txtCamposObligatorios">(*) Campos Obligatorios</span>
+            <hr>
+            <div class="col-md-9 col-md-offset-1">
+                <div class="form">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <legend>Datos del Cliente</legend>
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Rut Cliente</label>
+                                <input type="text" class="form-control" placeholder="Rut Cliente" id="rutCliente"
+                                    name="rutCliente">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Cuenta Corriente (*)</label>
+                                <input type="text" class="form-control" placeholder="Cuenta Corriente" id="ctaCliente"
+                                    name="ctaCliente">
+                                <span id="msgCtaCliente" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Razón Social</label>
+                                <input type="text" class="form-control" placeholder="Razón Social" id="razonSocial"
+                                    name="razonSocial">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+
+                        <div class="col-md-12">
+                            <legend>Datos del Contacto</legend>
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Nombre (*)</label>
+                                <input type="text" class="form-control" placeholder="Nombre" id="nombreCliente"
+                                    name="nombreCliente">
+                                <span id="msgNombre" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Apellido (*)</label>
+                                <input type="text" class="form-control" placeholder="Apellido" id="apellidoCliente"
+                                    name="apellidoCliente">
+                                <span id="msgApellido" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Teléfono (*)</label>
+                                <input type="text" class="form-control" placeholder="Teléfono" id="telefonoCliente"
+                                    name="telefonoCliente">
+                                <span id="msgFono" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Email (*)</label>
+                                <input type="text" class="form-control" placeholder="Email" id="emailCliente"
+                                    name="emailCliente">
+                                <span id="msgEmail" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-12">
+                            <legend>Dirección</legend>
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Dirección del Envío</label>
+                                <input type="text" class="form-control" placeholder="Dirección del Envío"
+                                    id="direccionEnvio" name="direccionEnvio">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Dirección de Impresión</label>
+                                <input type="text" class="form-control" placeholder="Dirección de Impresión"
+                                    id="direccionImpresion" name="direccionImpresion">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_01"><input type="checkbox"
+                                            name="chkOrdenServicio" id="chkOrdenServicio">Orden de Servicio</label>
+                                </div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantOrdenServicio"
+                                    name="cantOrdenServicio">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_02"><input type="checkbox" name="chkVentanas"
+                                            id="chkVentanas">Ventanas</label></div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantVentanas"
+                                    name="cantVentanas">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_03"><input type="checkbox" name="chkEtiquetas24"
+                                            id="chkEtiquetas24">Etiquetas 24 Horas</label></div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantEtiquetas24"
+                                    name="cantEtiquetas24">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_04"><input type="checkbox"
+                                            name="chkEtiquetasFragil" id="chkEtiquetasFragil">Etiquetas Frágil</label>
+                                </div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantEtiquetasFragil"
+                                    name="cantEtiquetasFragil">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_05"><input type="checkbox"
+                                            name="chkEtiquetasPos" id="chkEtiquetasPos">Etiquetas de Posición</label>
+                                </div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantEtiquetasPos"
+                                    name="cantEtiquetasPos">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_06"><input type="checkbox" name="chkEtiquetasSG"
+                                            id="chkEtiquetasSG">Etiquetas S&amp;G</label></div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantEtiquetasSG"
+                                    name="cantEtiquetasSG">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_07"><input type="checkbox"
+                                            name="chkEtiquetasMercanciasPel" id="chkEtiquetasMercanciasPel">Etiquetas
+                                        Mercancia Peligrosa</label></div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad"
+                                    id="cantEtiquetasMercanciasPel" name="cantEtiquetasMercanciasPel">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_08"><input type="checkbox"
+                                            name="chkEtiquetasOver" id="chkEtiquetasOver">Etiquetas Overnight</label>
+                                </div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantEtiquetasOver"
+                                    name="cantEtiquetasOver">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_09"><input type="checkbox"
+                                            name="chkEtiquetasRefr" id="chkEtiquetasRefr">Etiquetas Refrigerados</label>
+                                </div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantEtiquetasRefr"
+                                    name="cantEtiquetasRefr">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_10"><input type="checkbox"
+                                            name="chkEtiquetaTerrestre" id="chkEtiquetaTerrestre">Etiqueta
+                                        Terrestre</label></div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad"
+                                    id="cantEtiquetaTerrestre" name="cantEtiquetaTerrestre">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_11"><input type="checkbox"
+                                            name="chkEtiquetaAereo" id="chkEtiquetaAereo">Etiqueta Áereo</label></div>
+                                <!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantEtiquetaAereo"
+                                    name="cantEtiquetaAereo">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_12"><input type="checkbox"
+                                            name="chkCertificadoMercanciasPel"
+                                            id="chkCertificadoMercanciasPel">Certificado de Mercancia Peligrosa</label>
+                                </div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad"
+                                    id="cantCertificadoMercanciasPel" name="cantCertificadoMercanciasPel">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_13"><input type="checkbox"
+                                            name="chkBolsasFlyers" id="chkBolsasFlyers">Bolsas o Flyers</label></div>
+                                <!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantBolsasFlyers"
+                                    name="cantBolsasFlyers">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_14"><input type="checkbox" name="chkCajasJumbo"
+                                            id="chkCajasJumbo">Caja de Carton Jumbo</label></div><!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantCajasJumbo"
+                                    name="cantCajasJumbo">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_15"><input type="checkbox"
+                                            name="chkSobresCarton" id="chkSobresCarton">Sobres de Cartón</label></div>
+                                <!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantSobresCarton"
+                                    name="cantSobresCarton">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="checkbox"><label for="input_16"><input type="checkbox"
+                                            name="chkEtiquetasSega" id="chkEtiquetasSega">Etiquetas Sega</label></div>
+                                <!-- /.checkbox -->
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cantidad" id="cantEtiquetasSega"
+                                    name="cantEtiquetasSega">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="observaciones">Observaciones (*)</label>
+                                <textarea name="observaciones" id="observaciones" cols="30" rows="4"
+                                    class="form-control"></textarea>
+                                <span id="msgObservaciones" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <a class="btn btn-block btn-primary btn-lg" onclick="enviarForm()">Enviar Solicitud</a>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                    </div><!-- /.row -->
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

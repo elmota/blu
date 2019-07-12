@@ -11,6 +11,11 @@ import { PoliticaComponent } from './components/_nosotros/politica/politica.comp
 import { IntegracionComponent } from './components/_nosotros/integracion/integracion.component';
 import { ValoresComponent } from './components/_nosotros/valores/valores.component';
 import { TecnologiaComponent } from './components/_nosotros/tecnologia/tecnologia.component';
+import { EjecutivosComponent } from './components/_contacto/ejecutivos/ejecutivos.component';
+import { MaterialesComponent } from './components/_contacto/materiales/materiales.component';
+import { CoberturaComponent } from './components/_contacto/cobertura/cobertura.component';
+import { ServicioComponent } from './components/_contacto/servicio/servicio.component';
+import { TrabajeComponent } from './components/_contacto/trabaje/trabaje.component';
 
 const routes: Routes = [
   {
@@ -52,6 +57,25 @@ const routes: Routes = [
   {
     path: 'nosotros/tecnologia',
     component: TecnologiaComponent
+  },
+  {
+    path: 'contacto/ejecutivos',
+    component: EjecutivosComponent
+  },  {
+    path: 'contacto/servicio',
+    component: ServicioComponent
+  },
+  {
+    path: 'contacto/cobertura',
+    component: CoberturaComponent
+  },
+  {
+    path: 'contacto/materiales',
+    component: MaterialesComponent
+  },
+  {
+    path: 'contacto/trabaje',
+    component: TrabajeComponent
   }
 ];
 

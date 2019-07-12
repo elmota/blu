@@ -1,0 +1,107 @@
+<div class="wrapper">
+    <div class="container" id="info">
+
+        <div class="well conta clearfix">
+            <div class="col-md-10">
+
+                <h3>Solicitud de Ejecutivo</h3>
+                <span class="txtCamposObligatorios">(*) Campos Obligatorios</span>
+
+
+                <hr>
+                <div class="form">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <legend>Datos del Solicitante</legend>
+                        </div><!-- /.col-md-12 -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Rut Empresa</label>
+                                <input type="text" class="form-control" placeholder="Ingrese Rut de la empresa"
+                                    name="rutEmpresa" id="rutEmpresa">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Razón Social</label>
+                                <input type="text" class="form-control" placeholder="Ingrese Razón Social"
+                                    name="razonSocial" id="razonSocial">
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+
+                        <div class="col-md-12">
+                            <legend>Datos del Contacto</legend>
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Nombre (*)</label>
+                                <input type="text" class="form-control" placeholder="Nombre" name="nombreCliente"
+                                    id="nombreCliente">
+                                <span id="msgNombre" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Apellido (*)</label>
+                                <input type="text" class="form-control" placeholder="Apellido" name="apellidoCliente"
+                                    id="apellidoCliente">
+                                <span id="msgApellido" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Teléfono (*)</label>
+                                <input type="text" class="form-control" placeholder="Teléfono" name="telefonoCliente"
+                                    id="telefonoCliente">
+                                <span id="msgFono" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Email (*)</label>
+                                <input type="text" class="form-control" placeholder="Email" name="emailCliente"
+                                    id="emailCliente">
+                                <span id="msgEmail" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Tipo de Requerimiento</label>
+                                <select class="form-control" name="tipoReq" id="tipoReq">
+                                    <option value="">Distribución Nacional</option>
+                                    <option value="">Distribución Interacional</option>
+                                    <option value="">Almacenaje</option>
+                                    <option value="">Otros</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="observaciones">Observaciones (*)</label>
+                                <textarea name="observaciones" id="observaciones" cols="30" rows="4"
+                                    class="form-control"></textarea>
+                                <span id="msgObservaciones" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <a class="btn btn-block btn-primary btn-lg" onclick="enviarForm()">Enviar Solicitud</a>
+
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-12 -->
+
+                    </div><!-- /.row -->
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

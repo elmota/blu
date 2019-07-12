@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <div class="container" id="info">
+        <div class="well conta clearfix">
+            <h3>Consulta de Cobertura</h3>
+            <span class="txtCamposObligatorios">(*) Campos Obligatorios</span>
+            <hr>
+            <div class="col-md-10">
+                <div class="form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Nombre (*)</label>
+                                <input type="text" class="form-control" placeholder="Ingrese su Nombre"
+                                    name="nombreCliente" id="nombreCliente">
+                                <span id="msgNombre" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Apellido (*)</label>
+                                <input type="text" class="form-control" placeholder="Ingrese su Apellido"
+                                    name="apellidoCliente" id="apellidoCliente">
+                                <span id="msgApellido" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Teléfono (*)</label>
+                                <input type="text" class="form-control" placeholder="Ingrese su Teléfono"
+                                    name="telefonoCliente" id="telefonoCliente">
+                                <span id="msgFono" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Correo Electrónico (*)</label>
+                                <input type="text" class="form-control" placeholder="Ingrese su Correo Electrónico"
+                                    name="emailCliente" id="emailCliente">
+                                <span id="msgEmail" class="msgValidacion"> </span>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.col-md-6 -->
+                    </div><!-- /.row -->
+                    <div class="form-group">
+                        <label for="">Consultas (*)</label>
+                        <textarea name="detalle" id="detalle" cols="30" rows="4" class="form-control"
+                            placeholder="Escriba su consulta"></textarea>
+                        <span id="msgDetalle" class="msgValidacion"> </span>
+                    </div><!-- /.form-group -->
+                    <div class="form-group">
+                        <a class="btn btn-block btn-primary btn-lg" onclick="enviarForm()">Enviar Consulta</a>
+                    </div><!-- /.form-group -->
+                </div><!-- /.form -->
+            </div>
+        </div>
+    </div>
+</div>

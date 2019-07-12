@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
-
+  contacto = 'ejecutivos';
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 }

@@ -1,4 +1,4 @@
-<div class="container main" id="contacto">
+<div class="container-fluid main" id="contacto">
   <div class="row">
     <div class="col-md-12">
       <div class="center gap fade-down section-heading no-display animated fadeInDown appear">
@@ -8,8 +8,18 @@
   </div>
 
   <div class="row">
-    <div class="col-md-8 col-sm-12 offset-md-2">
-      <form>
+    <div class="col-md-3">
+      <app-menu></app-menu>
+    </div>
+    <div class="col-md-8">
+
+      <app-ejecutivos *ngIf="contacto == 'ejecutivos'"></app-ejecutivos>
+      <app-materiales *ngIf="contacto == 'materiales'"></app-materiales>
+      <app-cobertura *ngIf="contacto == 'cobertura'"></app-cobertura>
+      <app-servicio *ngIf="contacto == 'servicio'"></app-servicio>
+      <app-trabaje *ngIf="contacto == 'trabaje'"></app-trabaje>
+
+      <!-- <form>
         <div class="row">
           <div class="col-md">
             <div class="form-group">
@@ -40,7 +50,9 @@
           </div>
         </div>
 
-      </form>
+
+      </form> -->
+
     </div>
   </div>
 </div>

@@ -30,6 +30,12 @@ import { ValoresComponent } from './components/_nosotros/valores/valores.compone
 import { TecnologiaComponent } from './components/_nosotros/tecnologia/tecnologia.component';
 import { IntegracionComponent } from './components/_nosotros/integracion/integracion.component';
 import { PoliticaComponent } from './components/_nosotros/politica/politica.component';
+import { EjecutivosComponent } from './components/_contacto/ejecutivos/ejecutivos.component';
+import { ServicioComponent } from './components/_contacto/servicio/servicio.component';
+import { CoberturaComponent } from './components/_contacto/cobertura/cobertura.component';
+import { MaterialesComponent } from './components/_contacto/materiales/materiales.component';
+import { TrabajeComponent } from './components/_contacto/trabaje/trabaje.component';
+import { MenuComponent } from './components/_contacto/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +57,13 @@ import { PoliticaComponent } from './components/_nosotros/politica/politica.comp
     ValoresComponent,
     TecnologiaComponent,
     IntegracionComponent,
-    PoliticaComponent
+    PoliticaComponent,
+    EjecutivosComponent,
+    ServicioComponent,
+    CoberturaComponent,
+    MaterialesComponent,
+    TrabajeComponent,
+    MenuComponent
   ],
   imports: [
     ScrollToModule.forRoot(),

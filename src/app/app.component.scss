@@ -10,6 +10,17 @@ body {
   font-size: 16px;
 }
 :host ::ng-deep {
+  &.btn-primary {
+    background: black;
+    color: white!important;
+    border: none;
+
+    &:active {
+      background: #333!important;
+      color: white!important;
+      border: none!important;
+    }
+  }
   h1 {
     text-align: center;
   }
@@ -2290,5 +2301,5 @@ body {
 }
 
 a {
-    cursor:pointer;
+  cursor: pointer;
 }
