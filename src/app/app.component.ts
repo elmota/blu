@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollToService } from 'ng2-scroll-to-el';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,27 @@ import { ScrollToService } from 'ng2-scroll-to-el';
 })
 export class AppComponent {
 
-  constructor(private scrollService: ScrollToService) {  }
+  constructor(
+    private scrollService: ScrollToService,
+    private router: Router
+  ) { }
 
   title = 'bluexpress';
 
   scrollToTop(element) {
-    console.log('SCROLL', element)
-    this.scrollService.scrollTo(element);
+    if (this.router.url === '/') {
+      this.scrollService.scrollTo(element);
+    } else {
+      this.navigateTo('/');
+      setTimeout(() => {
+        console.log('ELEMENT', element, this.router.url);
+        this.scrollService.scrollTo(element);
+      }, 500);
+    }
   }
+
+  navigateTo(path) {
+    this.router.navigateByUrl(path);
+  }
+
 }
